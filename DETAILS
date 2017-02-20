@@ -1,0 +1,8 @@
+MOD_NAME=extra-utils
+MOD_VERSION=0.0.1
+MOD_LONG_NAME="[3.1] ${MOD_NAME} v${MOD_VERSION}"
+MOD_INFO="Extra utilities for Smoothwall Express.  Combines htop, gkrellmd, and iptraf-ng into one mod."
+MOD_DIR=/var/smoothwall/mods/extra-utils
+MOD_FORUM=
+MOD_AUTHOR=dataking
+MOD_MAINTAINER=dataking
