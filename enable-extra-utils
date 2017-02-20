@@ -25,13 +25,17 @@ given ($cwd) {
 		chomp($ans);
 		if ($ans =~ /^[Yy](?:es)?$/) {
 			# check for any of the directories
+			my $notice_flag = 0;
 			foreach my $util ( @utils ) {
 				if (-l "$mods_dir/$util") {
-					print colored("It looks like $util is already installed.  It will be removed before continuing\n", "bold cyan");
-					print colored("(This mod contains the same utility.  Removing this individual mod/utility is safe and more of a housecleaning measure.\n", "bold cyan");
+					$notice_flag = 1;
 					unlink("$mods_dir/$util");
 					system("/bin/rm -rf $modsa_dir/$util");
 				}
+			}
+			if ($notice_flag) {
+				print colored("Notice:  One or more of the same utilities found in this mod were found to be installed individually.  They have been removed.\n", "bold yellow");
+				print colored("Removing these individual mods/utilities is safe and more of a housecleaning measure.\n", "bold yellow");
 			}
 			print colored("Creating mod directory....\n", "bold cyan");
 			system("/bin/mkdir -p $modsa_dir/extra-utils") unless (-d "$modsa_dir/extra-utils");
@@ -39,7 +43,7 @@ given ($cwd) {
 			system("/bin/cp -rf * $modsa_dir/extra-utils/");
 			print colored("Setting up symlinks....\n", "bold cyan");
 			chdir("$modsa_dir/extra-utils/bin");
-			foreach my $utils ( @utils ) { system("/bin/ln -snf $util.$arch $util"); }
+			foreach my $util ( @utils ) { system("/bin/ln -snf $util.$arch $util"); }
 			chdir($mods_dir);
 			system("/bin/ln -snf ../mods-available/extra-utils extra-utils");
 			print colored("To complete setup and use these right now, issue the following command: \n", "bold cyan");
@@ -55,13 +59,17 @@ given ($cwd) {
 		chomp($ans);
 		if ($ans =~ /^[Yy](?:es)?$/) {
 			# check for any of the directories
+			my $notice_flag = 0;
 			foreach my $util ( @utils ) {
 				if (-l "$mods_dir/$util") {
-					print colored("It looks like $util is already installed.  It will be removed before continuing\n", "bold cyan");
-					print colored("(This mod contains the same utility.  Removing this individual mod/utility is safe and more of a housecleaning measure.\n", "bold cyan");
+					$notice_flag = 1;
 					unlink("$mods_dir/$util");
 					system("/bin/rm -rf $modsa_dir/$util");
 				}
+			}
+			if ($notice_flag) {
+				print colored("Notice:  One or more of the same utilities found in this mod were found to be installed individually.  They have been removed.\n", "bold yellow");
+				print colored("Removing these individual mods/utilities is safe and more of a housecleaning measure.\n", "bold yellow");
 			}
 			print colored("Creating mod directory....\n", "bold cyan");
 			system("/bin/mkdir -p $modsa_dir/extra-utils") unless (-d "$modsa_dir/extra-utils");
@@ -69,7 +77,7 @@ given ($cwd) {
 			system("/bin/cp -rf * $modsa_dir/extra-utils/");
 			print colored("Setting up symlinks....\n", "bold cyan");
 			chdir("$modsa_dir/extra-utils/bin");
-			foreach my $utils ( @utils ) { system("/bin/ln -snf $util.$arch $util"); }
+			foreach my $util ( @utils ) { system("/bin/ln -snf $util.$arch $util"); }
 			chdir($mods_dir);
 			system("/bin/ln -snf ../mods-available/extra-utils extra-utils");
 			print colored("To complete setup and use these right now, issue the following command: \n", "bold cyan");
@@ -85,13 +93,17 @@ given ($cwd) {
 		chomp($ans);
 		if ($ans =~ /^[Yy](?:es)?$/) {
 			# check for any of the directories
+			my $notice_flag = 0;
 			foreach my $util ( @utils ) {
 				if (-l "$mods_dir/$util") {
-					print colored("It looks like $util is already installed.  It will be removed before continuing\n", "bold cyan");
-					print colored("(This mod contains the same utility.  Removing this individual mod/utility is safe and more of a housecleaning measure.\n", "bold cyan");
+					$notice_flag = 1;
 					unlink("$mods_dir/$util");
 					system("/bin/rm -rf $modsa_dir/$util");
 				}
+			}
+			if ($notice_flag) {
+				print colored("Notice:  One or more of the same utilities found in this mod were found to be installed individually.  They have been removed.\n", "bold yellow");
+				print colored("Removing these individual mods/utilities is safe and more of a housecleaning measure.\n", "bold yellow");
 			}
 			print colored("Creating mod directory....\n", "bold cyan");
 			system("/bin/mkdir -p $modsa_dir/extra-utils") unless (-d "$modsa_dir/extra-utils");
@@ -99,7 +111,7 @@ given ($cwd) {
 			system("/bin/cp -rf * $modsa_dir/extra-utils/");
 			print colored("Setting up symlinks....\n", "bold cyan");
 			chdir("$modsa_dir/extra-utils/bin");
-			foreach my $utils ( @utils ) { system("/bin/ln -snf $util.$arch $util"); }
+			foreach my $util ( @utils ) { system("/bin/ln -snf $util.$arch $util"); }
 			chdir($mods_dir);
 			system("/bin/ln -snf ../mods-available/extra-utils extra-utils");
 			print colored("To complete setup and use these right now, issue the following command: \n", "bold cyan");
