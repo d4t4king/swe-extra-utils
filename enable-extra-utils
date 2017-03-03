@@ -11,7 +11,7 @@ my $arch = `/bin/uname -m`;
 chomp($arch);
 print colored("Found ARCH: $arch \n", "bold cyan");
 
-my @utils = qw( htop gkrellmd iptraf-ng );
+my @utils = qw( htop gkrellmd iptraf-ng screen );
 
 my $cwd = getcwd();
 my $mods_dir = "/var/smoothwall/mods";
