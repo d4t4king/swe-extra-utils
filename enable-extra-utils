@@ -117,7 +117,7 @@ given ($cwd) {
 			print colored("Quitting!\n", "bold red");
 		}
 	}
-	when ("$modsa_dir/htop") {
+	when ("$modsa_dir/extra-utils") {
 		print colored("Looks like we're in the mods-available directory, so most of the work is already done.  Would you like to install this mod to your smoothie?\n", "bold cyan");
 		my $ans = readline();
 		chomp($ans);
