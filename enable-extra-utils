@@ -53,6 +53,7 @@ given ($cwd) {
 			print colored("Quitting!\n", "bold red");
 		}
 	}
+=begin
 	when ("/var/smoothwall/mods-available/extra-utils") {
 		print colored("Looks like we're in the dev directory.  Would you like to install this mod to your smoothie?\n", "bold cyan");
 		my $ans = readline();
@@ -83,6 +84,7 @@ given ($cwd) {
 			print colored("Quitting!\n", "bold red");
 		}
 	}
+=cut 
 	when ("/tmp/extra-utils") {
 		print colored("Looks like we're in the tmp directory.  Would you like to install this mod to your smoothie?\n", "bold cyan");
 		my $ans = readline();
