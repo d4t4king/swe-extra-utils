@@ -1,5 +1,5 @@
 MOD_NAME=extra-utils
-MOD_VERSION=0.0.2
+MOD_VERSION=0.0.3
 MOD_LONG_NAME="[3.1] ${MOD_NAME} v${MOD_VERSION}"
 MOD_INFO="Extra utilities for Smoothwall Express.  Combines htop, gkrellmd, screen nd iptraf-ng into one mod."
 MOD_DIR=/var/smoothwall/mods/extra-utils
